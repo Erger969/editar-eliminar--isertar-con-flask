@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Productos</title>
+</head>
+<body>
+    <h1>Gestion de Productos</h1>
+    <a href="{{ url_for('nuevo')}}"> nuevo</a>
+    <br>
+    <table border="1">
+       <tr>
+            <th>id</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>telefono</th>
+            <th></th>
+            <th></th>
+       </tr>
+        
+    </tr>
+    {% for item in contactos %}
+    <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.nombre}}</td>
+        <td>{{ item.correo}}</td>
+        <td>{{ item.celular}}</td>
+        <td><a href="{{ url_for('editar', id= contacto.id)}}"> Editar</a></td>
+        <td>
+            <form action="{{ url_for('eliminar', id=contacto.id)}}" method="POST">
+
+                <input type="submit" value="eliminar">
+            </form>
+            
+
+        </td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIPERMAXI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='inde.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
+</head>
+<footer>
+    <p>SEGUNDO PARCIAL.</p>
+    <p> Nombre: Erick German Chipana mamani </p>
+    <p> ci: 9895128 LP</p>
+</footer>
+<body>
+    <h1>HIPERMAXI </h1>
+    <nav>
+        <a class="button" href="{{ url_for('agregar_producto') }}">Nuevo Producto</a>
+        <a class="button" href="{{ url_for('listar_productos') }}">Registro de Productos</a>
+    </nav>
+</body>
+</html>
